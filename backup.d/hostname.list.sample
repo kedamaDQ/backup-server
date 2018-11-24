@@ -1,0 +1,17 @@
+#
+# hostname.list.sample
+#
+# set filename to "<target host>.list".
+# the "<target host>" must match 1st arguments of the "backup.sh".
+# lines are ignored which start with '#' or which is blank.
+#
+# format:
+#   /path/of/target/    <rsync options>
+#
+# path of target should be ends with "/".
+# the rsync options are passed directry to the rsync command.
+#
+# example
+# /var/log/         --bwlimit=4096
+# /etc/             --bwlimit=16384 --exclude=ca-certificates/
+#
