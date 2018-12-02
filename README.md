@@ -10,7 +10,7 @@ to setup remote backup target, use [backup-remote][br].
 
 ## setup
 
-### create ssh key pair.
+### create ssh key pair
 
 create ssh key pair for access to remote servers over the ssh.
 
@@ -112,7 +112,7 @@ write absolute path to backup target directory on the remote host in list file. 
 if necessary, you can set the rsync options separated one or more blanks following the path. eg:
 
 ```
-/home/user  --bwlimit=4096
+/home/user/  --bwlimit=4096
 ```
 
 ## setup remote server
@@ -128,7 +128,7 @@ run `backup.sh` with __HOSTNAME__. eg:
 # bash /root/backup-server/backup.sh 192.168.1.1
 ```
 
-you can set the port to second argument if necessary.(default: 22)
+you can set the port number at second argument if necessary.(default: 22)
 
 ```
 # bash /root/backup-server/backup.sh 192.168.1.1 22222
@@ -139,8 +139,8 @@ you can set the port to second argument if necessary.(default: 22)
 write in your crontab. eg:
 
 ```
-03 03 * * * root /bin/bash /root/backup-server.sh 192.168.1.1 > /tmp/192.168.1.1.log 2>&1
-13 03 * * * root /bin/bash /root/backup-server.sh example.com 22222 > /tmp/example.com.log 2>&1
+03 03 * * * root /bin/bash /root/backup-server/backup.sh 192.168.1.1 > /tmp/192.168.1.1.log 2>&1
+13 03 * * * root /bin/bash /root/backup-server/backup.sh example.com 22222 > /tmp/example.com.log 2>&1
 ```
 
 [br]:https://github.com/kedamaDQ/backup-remote
