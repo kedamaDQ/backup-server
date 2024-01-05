@@ -55,7 +55,7 @@ else
     error "cannot access log directory: ${LOG_DIR}"
     exit 4
   fi
-  LOG="$(stripslash ${LOG_DIR})/${HOST}.$(date +%Y-%m-%d-%H.%M.%S).log"
+  LOG="$(stripslash ${LOG_DIR})/${HOST}.log"
 fi
 
 # start
